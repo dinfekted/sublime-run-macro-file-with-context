@@ -30,6 +30,33 @@ Example command:
 },
 ```
 
+Example macro:
+
+```
+[
+  {
+    "command": "insert",
+    "args": {
+      "characters": ".",
+    },
+    "context": [
+      {"key": "preceding_text_begin", "operator": "regex_contains", "operand": ".(?<!\\.)$"},
+    ]
+  },
+
+  {
+    "command": "insert",
+    "args": {
+      "characters": ";",
+    },
+    "context": [
+      {"key": "following_text_end", "operator": "regex_contains", "operand": ";$"},
+    ]
+  },
+
+
+]
+```
 
 ### Dependencies
 
